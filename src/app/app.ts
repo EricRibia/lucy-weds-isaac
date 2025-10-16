@@ -1,11 +1,9 @@
 import {Component, OnDestroy, signal} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {DecimalPipe, NgOptimizedImage} from '@angular/common';
+import {DecimalPipe} from '@angular/common';
 
 @Component({
   selector: 'app-root',
   imports: [
-    NgOptimizedImage,
     DecimalPipe
   ],
   standalone:true,
@@ -19,7 +17,7 @@ export class App implements OnDestroy{
   minutes = signal(0);
   seconds = signal(0);
   // Countdown Timer
-  targetDate = new Date("2025-11-07T23:59:59").getTime();
+  targetDate = new Date("2025-12-05T23:59:59").getTime();
 
   updateCountdown() {
     const now = new Date().getTime();
